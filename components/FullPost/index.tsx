@@ -9,9 +9,9 @@ import styles from './FullPost.module.scss';
 
 export const FullPost = () => {
   return (
-    <Paper elevation={0}>
-      <div style={{ margin: '0 auto', width: 600 }}>
-        <Typography variant="h4">
+    <Paper elevation={0} className={styles.paper}>
+      <div className="container">
+        <Typography variant="h4" className={styles.title}>
           Ex dolor laborum ipsum laborum id laboris minim ipsum consequat irure ipsum amet. Eu
           adipisicing in excepteur consequat magna et ad mollit quis magna et. Nulla nisi qui
           exercitation aliquip aliquip in ea commodo tempor. Fugiat ullamco anim consequat quis
@@ -40,8 +40,11 @@ export const FullPost = () => {
             <PostActions />
           </div>
           <div className="d-flex justify-between align-center mt-30 mb-30">
-            <div>
-              {/* <img src="" alt="" /> */}
+            <div className={styles.user}>
+              <img
+                src="https://leonardo.osnova.io/675d2d42-c6ec-8906-c746-c8835a9e68e6/-/scale_crop/64x64/"
+                alt="Avatar"
+              />
               <b>Donnie Darko</b>
               <span>+1685</span>
             </div>

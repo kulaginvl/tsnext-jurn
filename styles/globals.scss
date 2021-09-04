@@ -3,8 +3,7 @@ body {
   padding: 0;
   margin: 0;
   background-color: #f2f2f2;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
-    Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Roboto, 'Helvetica Neue', Helvetica, sans-serif;
 }
 
 a {
@@ -13,9 +12,10 @@ a {
 }
 
 * {
+  -webkit-text-size-adjust: 100%;
   box-sizing: border-box;
   outline: none;
-  -webkit-text-size-adjust: 100%;
+  font-family: Roboto, 'Helvetica Neue', Helvetica, sans-serif;
 }
 .content {
   max-width: 640px;
@@ -28,6 +28,14 @@ a {
 }
 .wrapper {
   display: flex;
-  padding: 0 auto;
+  padding: 0 30px;
   padding-top: 80px;
+}
+.container {
+  width: 680px;
+  margin: 0 auto;
+}
+.main-layout-white {
+  height: 100vh;
+  background-color: #fff;
 }

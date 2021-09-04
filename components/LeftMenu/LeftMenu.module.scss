@@ -1,5 +1,22 @@
 .menu {
-  li {
-    list-style-type: none;
+  position: sticky;
+  width: 160px;
+  top: 90px;
+  ul {
+    padding: 0 10px;
+    // margin: 0;
+    li {
+      display: flex;
+      align-items: center;
+      height: 44px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-bottom: 3px;
+      border-radius: 8px;
+      list-style-type: none;
+      &:hover {
+        width: 200px !important;
+      }
+    }
   }
 }

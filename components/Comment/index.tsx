@@ -7,11 +7,13 @@ import { IconButton, Menu, MenuItem, Typography } from '@material-ui/core';
 interface CommentProps {
   user: {
     fullname: string;
+    avatarUrl: string;
   };
   text: string;
+  createdAt: string;
 }
 
-export const Comment: FC<CommentProps> = ({ user, text }) => {
+export const Comment: FC<CommentProps> = ({ user, text, createdAt }) => {
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const handleClick = (event: any) => {
@@ -24,15 +26,11 @@ export const Comment: FC<CommentProps> = ({ user, text }) => {
   return (
     <div>
       <div>
-        {/* <img src="" alt="" /> */}
-        <b>Piter Parker</b>
-        <span>5 часов</span>
+        <img src={user.avatarUrl} alt="Avatar" />
+        <b>{user.fullname}</b>
+        <span>{createdAt}</span>
       </div>
-      <Typography>
-        Sunt non anim veniam quis id quis id.Duis incididunt id nulla amet est.Reprehenderit quis
-        commodo nostrud non labore anim enim nisi sunt.Nulla cillum aliqua sunt non Lorem tempor
-        voluptate occaecat fugiat anim fugiat amet.
-      </Typography>
+      <Typography>{text}</Typography>
       <span>Ответить</span>
       <IconButton onClick={handleClick}>
         <MoreIcon />
